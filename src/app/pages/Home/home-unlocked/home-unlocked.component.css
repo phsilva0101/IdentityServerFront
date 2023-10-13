@@ -5,3 +5,11 @@
   .conteudo {
     background-color: #3d7b30;
   }
+
+  a:hover {
+    color: #a9de96;
+  }
+
+  .img-logo{
+    color: white;
+  }

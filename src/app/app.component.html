@@ -1,4 +1,5 @@
 <block-ui>
+  <app-home-unlocked *ngIf="!isUserLoggedIn()"></app-home-unlocked>
   <app-side-menu *ngIf="isUserLoggedIn()">
     <router-outlet></router-outlet>
   </app-side-menu>

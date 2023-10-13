@@ -19,6 +19,7 @@ export class SideMenuComponent {
 
   ngOnInit(): void {
     const user = this.authService.getUser();
+    console.log(user);
     if(user){
       this.usuario.name = user?.['name'];
     }
