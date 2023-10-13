@@ -18,6 +18,7 @@ import { HomeComponent } from './pages/Home/home/home.component';
 import { AuthModule } from './auth/auth.module';
 import { HomeUnlockedComponent } from './pages/Home/home-unlocked/home-unlocked.component';
 import { AuthCallbackComponent } from './pages/Auth/auth-callback/auth-callback.component';
+import { SideMenuComponent } from './components/side-menu/side-menu.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { AuthCallbackComponent } from './pages/Auth/auth-callback/auth-callback.
     HomeComponent,
     HomeUnlockedComponent,
     AuthCallbackComponent,
+    SideMenuComponent,
   ],
   imports: [
     BrowserModule,

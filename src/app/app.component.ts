@@ -14,17 +14,7 @@ export class AppComponent {
 
   constructor(private router: Router, private authService: AuthService) {}
 
-  navigateToLogin(): void {
-   this.authService.login();
-   //this.router.navigate(['/home']);
-
+  isUserLoggedIn(): boolean {
+    return this.authService.hasValidToken();
   }
-
-  navigateToRegister(): void {
-    this.router.navigate(['/register']);
-  }
-
-  // ngOnInit(): void {
-  //   this.authService.logout();
-  // }
 }

@@ -1,5 +1,5 @@
 <block-ui>
-  
-
-  <router-outlet></router-outlet>
+  <app-side-menu *ngIf="isUserLoggedIn()">
+    <router-outlet></router-outlet>
+  </app-side-menu>
 </block-ui>

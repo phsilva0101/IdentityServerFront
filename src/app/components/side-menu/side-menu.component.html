@@ -1,0 +1,82 @@
+<mat-sidenav-container class="full-height">
+  <mat-sidenav #sidenav mode="side" opened class="sidebar">
+    <!-- Seção do usuário -->
+    <div class="d-flex align-items-center flex-column py-3">
+      <img
+        src="../../../assets/perfil.jpg"
+        alt="user"
+        class="rounded-circle"
+        width="80"
+      />
+
+      <div class="row w-100">
+        <!-- Ícone de logout -->
+        <div class="col-2 d-flex justify-content-start">
+          <button mat-icon-button (click)="logout()">
+            <i class="invert-icon fa-solid fa-right-from-bracket"></i>
+          </button>
+        </div>
+
+        <!-- Texto "Olá," -->
+        <div class="col-8 d-flex justify-content-center align-self-center texto-usuario">
+          <p class="text-center text-dark font-weight-bold m-0">Olá, </p>
+          <p class="text-center text-dark font-weight-bold m-0">
+            {{ usuario.name }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção de links do menu -->
+    <div class="list-group list-group-flush">
+      <!-- Grupo Geral -->
+      <div class="menu-section-header">Geral</div>
+      <div class="sidebar-item">
+        <i class="sidebar-icon fa fa-tachometer-alt"></i>
+        <a class="sidebar-menu" routerLink="/"
+          >Página Inicial</a
+        >
+      </div>
+
+      <!-- Grupo Explorar -->
+      <div class="menu-section-header">Explorar</div>
+      <div class="sidebar-item">
+        <i class="sidebar-icon fa-solid fa-magnifying-glass"></i>
+        <a class="sidebar-menu" routerLink="/buscar-sedes"
+          >Buscar Sedes</a
+        >
+      </div>
+
+      <!-- Grupo Gerencial -->
+      <div class="menu-section-header">Gerencial</div>
+      <div class="sidebar-item">
+        <i class="sidebar-icon fa-solid fa-calendar-days"></i>
+        <a class="sidebar-menu" routerLink="/meus-agendamentos"
+          >Meus Agendamentos</a
+        >
+      
+      </div>
+      <div class="sidebar-item">
+        <i class="sidebar-icon fa-solid fa-money-bill"></i>
+        <a class="sidebar-menu" routerLink="/pagamento"
+          >Pagamento</a
+        >
+      </div>
+     
+
+      <!-- Grupo Usuário -->
+      <div class="menu-section-header">Usuário</div>
+      <div class="sidebar-item">
+        <i class=" sidebar-icon fa-solid fa-user"></i>
+        <a class="sidebar-menu" routerLink="/editar-perfil"
+          >Editar Perfil</a
+        >
+      
+      </div>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- Conteúdo principal -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
