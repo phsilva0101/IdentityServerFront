@@ -1,1 +1,66 @@
-<p>home works!</p>
+<app-header> Página Inicial </app-header>
+
+<div class="container">
+  <div *ngIf="pendencias > 0" class="row">
+    <div class="fundo-warning">
+      <i class="fas fa-exclamation-triangle"></i> Atenção
+      <p>
+        Você possui {{ pendencias }} agendamento(s) com pendência(s), acesse a
+        tela de agendamento para verificar
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <app-card
+        [titulo]="'Total de agendamentos'"
+        [quantidade]="42"
+        class="me-3 tamanho"
+      ></app-card>
+    </div>
+
+    <div class="col-md-4">
+      <app-card
+        [titulo]="'Total de agendamentos que foram cancelados'"
+        [quantidade]="1"
+        class="me-3 tamanho"
+      ></app-card>
+    </div>
+
+    <div class="col-md-4">
+      <app-card
+        [titulo]="'Total de agendamentos que não compareceu'"
+        [quantidade]="1"
+        class="me-3 tamanho"
+      ></app-card>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <app-card
+        [titulo]="'Total de agendamentos que compareceu'"
+        [quantidade]="37"
+        class="me-3 tamanho"
+      ></app-card>
+    </div>
+
+    <div class="col-md-4">
+      <app-card
+        [titulo]="'Total de agendamentos que estão pendentes pagamento'"
+        [quantidade]="2"
+        class="me-3 tamanho"
+      ></app-card>
+    </div>
+
+    <div class="col-md-4">
+      <app-card
+        [titulo]="'Total de agendamentos que estão em andamento'"
+        [quantidade]="1"
+        class="me-3 tamanho"
+      ></app-card>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+</div>

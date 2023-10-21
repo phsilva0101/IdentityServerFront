@@ -1,0 +1,21 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li
+        *ngFor="let item of items; let last = last; let first = first"
+        class="breadcrumb-item"
+        [ngClass]="{ active: last }"
+      >
+        <a *ngIf="!last && item.url" [routerLink]="item.url">
+          <!-- Adiciona o ícone se for o primeiro item -->
+          <i *ngIf="first" class="fas fa-home mr-1"></i>
+          {{ item.label }}
+        </a>
+        <span *ngIf="last || !item.url">
+          <!-- Adiciona o ícone se for o primeiro item -->
+          <i *ngIf="first" class="fas fa-home mr-1"></i>
+          {{ item.label }}
+        </span>
+      </li>
+    </ol>
+  </nav>
+  

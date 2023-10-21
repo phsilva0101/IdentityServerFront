@@ -1,0 +1,27 @@
+.card-container {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; 
+    padding: 20px; 
+    width: 380px;;
+    height: 240px;
+  }
+  
+  .numero {
+    font-size: 2em;
+    margin-bottom: 20px; 
+  }
+
+  .centralizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  button:hover {
+    text-decoration: none;
+    background-color: #317d25;
+    color: white;
+  }
+  

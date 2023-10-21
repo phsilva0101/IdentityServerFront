@@ -1,0 +1,36 @@
+.header-container {
+  background-color: #317d25; /* Verde claro */
+  height: 80px;
+  width: 100%;
+}
+
+.content-container {
+  padding: 10px 15px;
+}
+
+.breadcrumb-container {
+  margin-bottom: 10px;
+}
+
+.title-container {
+  font-size: 24px;
+}
+
+.botao-notificacao {
+  background-color: #317d25;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centraliza {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

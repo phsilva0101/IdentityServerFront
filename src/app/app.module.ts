@@ -19,6 +19,9 @@ import { AuthModule } from './auth/auth.module';
 import { HomeUnlockedComponent } from './pages/Home/home-unlocked/home-unlocked.component';
 import { AuthCallbackComponent } from './pages/Auth/auth-callback/auth-callback.component';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
+import { CardComponent } from './components/Card/card/card.component';
+import { BreadcrumbComponent } from './components/Breadcrumb/breadcrumb/breadcrumb.component';
+import { HeaderComponent } from './components/Header/header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +31,9 @@ import { SideMenuComponent } from './components/side-menu/side-menu.component';
     HomeUnlockedComponent,
     AuthCallbackComponent,
     SideMenuComponent,
+    CardComponent,
+    BreadcrumbComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

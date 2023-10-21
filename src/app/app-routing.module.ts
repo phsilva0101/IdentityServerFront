@@ -26,7 +26,8 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
     pathMatch: 'full',
-    // canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
+    data: { breadcrumb: 'Página Inicial' },
   },
 
   { path: 'auth-callback', component: AuthCallbackComponent },

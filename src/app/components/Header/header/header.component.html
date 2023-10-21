@@ -1,0 +1,31 @@
+<div class="header-container"></div>
+
+<div class="row">
+  <div class="col-md-10">
+    <div class="content-container">
+      <!-- Breadcrumb -->
+      <div class="breadcrumb-container">
+        <app-breadcrumb></app-breadcrumb>
+      </div>
+
+      <!-- Título da Página -->
+      <div class="title-container">
+        <h1>
+          <ng-content></ng-content>
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-2 centraliza">
+    <button class="btn btn-success position-relative" (click)="openModalNotificacoes()">
+      <i class="fas fa-bell"></i>
+      <span
+        *ngIf="notificationCount > 0"
+        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+      >
+        {{ notificationCount > 99 ? "99+" : notificationCount }}
+        <span class="visually-hidden">unread messages</span>
+      </span>
+    </button>
+  </div>
+</div>
