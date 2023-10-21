@@ -6,6 +6,9 @@ import { FallbackComponent } from './pages/Auth/fallback/fallback.component';
 import { HomeComponent } from './pages/Home/home/home.component';
 import { HomeUnlockedComponent } from './pages/Home/home-unlocked/home-unlocked.component';
 import { AuthCallbackComponent } from './pages/Auth/auth-callback/auth-callback.component';
+import { ListarAgendamentosComponent } from './pages/Gerencial/Agendamentos/listar-agendamentos/listar-agendamentos.component';
+import { ListarPagamentosComponent } from './pages/Gerencial/Pagamento/listar-pagamentos/listar-pagamentos.component';
+import { BuscarSedesComponent } from './pages/Explorar/Sedes/buscar-sedes/buscar-sedes.component';
 
 const routes: Routes = [
   {
@@ -28,6 +31,24 @@ const routes: Routes = [
     pathMatch: 'full',
     canActivate: [AuthGuard],
     data: { breadcrumb: 'Página Inicial' },
+  },
+  {
+    path: 'meus-agendamentos',
+    component: ListarAgendamentosComponent,
+    canActivate: [AuthGuard],
+    data: { breadcrumb: 'Meus Agendamentos' },
+  },
+  {
+    path: 'meus-pagamentos',
+    component: ListarPagamentosComponent,
+    canActivate: [AuthGuard],
+    data: { breadcrumb: 'Meus Pagamentos' },
+  },
+  {
+    path: 'buscar-sedes',
+    component: BuscarSedesComponent,
+    canActivate: [AuthGuard],
+    data: { breadcrumb: 'Buscar Sedes' },
   },
 
   { path: 'auth-callback', component: AuthCallbackComponent },

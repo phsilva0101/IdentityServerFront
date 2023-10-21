@@ -51,3 +51,16 @@
 p {
   color: #fff !important;
 }
+
+.mat-expansion-panel {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.mat-expansion-indicator::after {
+  color: white !important;
+}
+
+.sidebar-submenu {
+  padding-top: 10px; /* ou o valor que você preferir */
+}

@@ -22,6 +22,9 @@ import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { CardComponent } from './components/Card/card/card.component';
 import { BreadcrumbComponent } from './components/Breadcrumb/breadcrumb/breadcrumb.component';
 import { HeaderComponent } from './components/Header/header/header.component';
+import { BuscarSedesComponent } from './pages/Explorar/Sedes/buscar-sedes/buscar-sedes.component';
+import { ListarAgendamentosComponent } from './pages/Gerencial/Agendamentos/listar-agendamentos/listar-agendamentos.component';
+import { ListarPagamentosComponent } from './pages/Gerencial/Pagamento/listar-pagamentos/listar-pagamentos.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +37,9 @@ import { HeaderComponent } from './components/Header/header/header.component';
     CardComponent,
     BreadcrumbComponent,
     HeaderComponent,
+    BuscarSedesComponent,
+    ListarAgendamentosComponent,
+    ListarPagamentosComponent,
   ],
   imports: [
     BrowserModule,
