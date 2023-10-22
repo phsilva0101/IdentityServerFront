@@ -1,1 +1,37 @@
-<p>buscar-sedes works!</p>
+<app-header>Meus Agendamentos</app-header>
+
+<div class="container mt-5">
+  <!-- <div class="d-flex justify-content-end mb-3">
+    <button
+      mat-raised-button
+      color="primary"
+      class="me-2"
+      (click)="novoAgendamento()"
+    >
+      Novo
+    </button>
+    <button
+      mat-raised-button
+      color="accent"
+      [disabled]="!isSelected"
+      class="me-2"
+      (click)="editarAgendamento()"
+    >
+      Editar
+    </button>
+    <button mat-raised-button color="warn" (click)="abrirFiltro()">
+      Filtrar
+    </button>
+  </div> -->
+
+  <!-- Tabela de Agendamentos -->
+  <div class="mat-elevation-z8">
+    <app-dynamic-table
+      [data]="agendamentos"
+      [columns]="columns"
+      [columnLabels]="columnsLabels"
+      [buttons]="buttons"
+      (buttonClick)="handleButtonClick($event)"
+    ></app-dynamic-table>
+  </div>
+</div>

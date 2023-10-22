@@ -25,6 +25,7 @@ import { HeaderComponent } from './components/Header/header/header.component';
 import { BuscarSedesComponent } from './pages/Explorar/Sedes/buscar-sedes/buscar-sedes.component';
 import { ListarAgendamentosComponent } from './pages/Gerencial/Agendamentos/listar-agendamentos/listar-agendamentos.component';
 import { ListarPagamentosComponent } from './pages/Gerencial/Pagamento/listar-pagamentos/listar-pagamentos.component';
+import { DynamicTableComponent } from './components/Table/dynamic-table/dynamic-table.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,7 @@ import { ListarPagamentosComponent } from './pages/Gerencial/Pagamento/listar-pa
     BuscarSedesComponent,
     ListarAgendamentosComponent,
     ListarPagamentosComponent,
+    DynamicTableComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,22 +6,26 @@ import { AuthService } from 'src/app/services/auth-service.service';
 @Component({
   selector: 'app-side-menu',
   templateUrl: './side-menu.component.html',
-  styleUrls: ['./side-menu.component.css']
+  styleUrls: ['./side-menu.component.css'],
 })
 export class SideMenuComponent {
-   usuario: User = {
+  usuario: User = {
     username: '',
     password: '',
     email: '',
-    name: ''
+    name: '',
   };
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {
     const user = this.authService.getUser();
+    const token = this.authService.accessToken;
     console.log(user);
-    if(user){
+    console.log(token);
+    if (user && user?.['name']) {
       this.usuario.name = user?.['name'];
+    } else {
+      // window.location.reload();
     }
   }
 

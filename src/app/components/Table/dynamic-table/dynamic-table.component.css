@@ -1,0 +1,18 @@
+.custom-header {
+  background-color: #317d25 !important; /* Verde */
+  color: white; /* Cor do texto */
+}
+
+/* Se precisar mudar a cor das células do cabeçalho */
+.custom-header .mat-header-cell {
+  background-color: inherit;
+  color: inherit;
+}
+
+.mat-row:nth-child(odd) {
+  background-color: #f5f5f5; /* Cor para linhas ímpares, por exemplo, cinza claro */
+}
+
+.mat-row:nth-child(even) {
+  background-color: #ffffff; /* Cor para linhas pares, por exemplo, branco */
+}

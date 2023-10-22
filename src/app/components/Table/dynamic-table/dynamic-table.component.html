@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-end mb-3">
+  <button
+    *ngFor="let btn of buttons"
+    mat-raised-button
+    [disabled]="btn.action === 'edit' && !hasSelection()"
+    (click)="onButtonClick(btn.action)"
+    class="me-2 primary"
+  >
+    {{ btn.label }}
+  </button>
+</div>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+  <ng-container matColumnDef="select">
+    <th mat-header-cell *matHeaderCellDef>
+      <!-- Header checkbox (optional) -->
+    </th>
+    <td mat-cell *matCellDef="let row">
+      <mat-checkbox (change)="onRowToggle(row)"></mat-checkbox>
+    </td>
+  </ng-container>
+  <!-- Dynamic columns -->
+
+  <ng-container *ngFor="let column of columns" [matColumnDef]="column">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+      {{ columnLabels[columns.indexOf(column)] }}
+    </th>
+    <td mat-cell *matCellDef="let element">{{ element[column] }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columns" class="custom-header"></tr>
+  <tr mat-row *matRowDef="let row; columns: columns" class="mat-row"></tr>
+</table>

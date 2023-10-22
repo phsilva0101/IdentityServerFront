@@ -21,6 +21,7 @@ export class BreadcrumbComponent {
   ngOnInit(): void {
     try {
       this.router.events.subscribe((event) => {
+        console.log('event', event);  
         if (
           event instanceof NavigationEnd ||
           (event instanceof Scroll &&
